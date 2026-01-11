@@ -93,7 +93,7 @@
             display: flex;
             flex-shrink: 0;
             position: relative;
-            overflow: hidden;
+            overflow: auto;
             background-color: var(--color-bg-surface);
             border-radius: 8px;
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
@@ -111,9 +111,10 @@
         .slide.content-slide {
             flex-direction: column;
             padding: 2rem;
+            overflow-y: auto;
         }
 
-        h1 { 
+        h1 {
             font-size: 3.75rem;
             font-weight: 700;
             margin-bottom: 1rem;
@@ -121,7 +122,7 @@
             line-height: 1.2;
         }
 
-        h2 { 
+        h2 {
             font-size: 2.25rem;
             font-weight: 700;
             margin-bottom: 1.5rem;
@@ -129,14 +130,14 @@
             line-height: 1.2;
         }
 
-        h4 { 
+        h4 {
             font-size: 1.5rem;
             font-weight: 600;
             margin-bottom: 1rem;
             color: var(--color-accent);
         }
 
-        .text-lg { 
+        .text-lg {
             font-size: 1.125rem;
             line-height: 1.8;
         }
@@ -156,12 +157,12 @@
             line-height: 2;
         }
 
-        li { 
+        li {
             margin-bottom: 0.75rem;
             color: var(--color-text-secondary);
         }
 
-        li:last-child { 
+        li:last-child {
             margin-bottom: 0;
         }
 
@@ -225,10 +226,6 @@
             color: #94a3b8;
         }
 
-        .hidden {
-            display: none;
-        }
-
         @media (max-width: 768px) {
             .slide {
                 height: auto;
@@ -268,11 +265,11 @@
     <div class="container">
         <!-- Slide 1 -->
         <section class="slide center-slide">
-            <h1 class="lang-toggle-content" data-en="Small Habits, Big Results" data-hi="छोटी Habits, बड़े Results">Small Habits, Big Results</h1>
-            <p class="subtitle lang-toggle-content" data-en="Building Excellence Through Daily Practices" data-hi="Daily Practices से Excellence बनाओ">Building Excellence Through Daily Practices</p>
-            <p class="tagline lang-toggle-content" data-en="Success starts with 1% improvement every day" data-hi="हर दिन 1% बेहतर बनना - यही success है">Success starts with 1% improvement every day</p>
+            <h1 class="lang-toggle-content" data-en="Small Habits, Big Results" data-hi="छोटी Habits, बड़े नतीजे">Small Habits, Big Results</h1>
+            <p class="subtitle lang-toggle-content" data-en="Building Excellence Through Daily Practices" data-hi="रोज़ की छोटी आदतों से शानदार नतीजे">Building Excellence Through Daily Practices</p>
+            <p class="tagline lang-toggle-content" data-en="Success starts with 1% improvement every day" data-hi="सफलता शुरू होती है 1% रोज़ बेहतर होने से">Success starts with 1% improvement every day</p>
             <div class="notes-section" style="margin-top: 3rem; border-top: 2px solid var(--color-accent); padding-top: 2rem;">
-                <p class="text-sm lang-toggle-content" data-en="Your Notes: This isn't about making huge changes overnight. It's about consistent, small improvements that compound over time. You already have strong fundamentals. This is about making those fundamentals automated and unbreakable. Research shows that 1% better every day leads to a 37x improvement in a year. That's what you're building toward." data-hi="आपके Notes: यह तो रातों-रात बड़े बदलाव का सवाल नहीं है। यह consistent, छोटे-छोटे improvements के बारे में है जो समय के साथ compound होते हैं। तुम्हारी fundamentals पहले से ही strong हैं। यह सब उन्हें automatic और unbreakable बनाने के बारे में है। Research दिखाता है कि हर दिन 1% बेहतर = एक साल में 37x बेहतर। यही target है तुम्हारा।">Your Notes: This isn't about making huge changes overnight...</p>
+                <p class="text-sm lang-toggle-content" data-en="Your Notes: This isn't about making huge changes overnight. It's about consistent, small improvements that compound over time. You already have strong fundamentals. This is about making those fundamentals automated and unbreakable. Research shows that 1% better every day leads to a 37x improvement in a year. That's what you're building toward." data-hi="आपकी Notes: यह रातों-रात बड़े बदलाव लाने के बारे में नहीं है। छोटी, consistent improvements के बारे में है जो समय के साथ जुड़ती हैं। आपके पास पहले से ही मजबूत fundamentals हैं। यह उन्हें automatic और unbreakable बनाने के बारे में है। Research दिखाती है कि 1% daily better होने से साल में 37x improvement आती है।">Your Notes: This isn't about making huge changes overnight. It's about consistent, small improvements that compound over time. You already have strong fundamentals. This is about making those fundamentals automated and unbreakable. Research shows that 1% better every day leads to a 37x improvement in a year. That's what you're building toward.</p>
             </div>
         </section>
 
@@ -280,256 +277,28 @@
         <section class="slide content-slide">
             <h2 class="lang-toggle-content" data-en="What Are Habits?" data-hi="Habits क्या होती हैं?">What Are Habits?</h2>
             <ul class="text-lg">
-                <li class="lang-toggle-content" data-en="Automatic behaviors we perform without conscious thought" data-hi="जो काम हम सोचे-समझे बिना, आटोमेटिक रूप से करते हैं">Automatic behaviors we perform without conscious thought</li>
-                <li class="lang-toggle-content" data-en="The foundation of your results - your outcomes are a reflection of your daily habits" data-hi="आपके results की नींव - आपके outcomes तो दरअसल आपकी daily habits का reflection हैं">The foundation of your results - your outcomes are a reflection of your daily habits</li>
-                <li class="lang-toggle-content" data-en="One small habit can cascade into massive results" data-hi="एक छोटी सी habit भी बहुत बड़े results ला सकती है">One small habit can cascade into massive results</li>
+                <li class="lang-toggle-content" data-en="Automatic behaviors we perform without conscious thought" data-hi="Automatic behaviors जो हम बिना सोचे करते हैं">Automatic behaviors we perform without conscious thought</li>
+                <li class="lang-toggle-content" data-en="The foundation of your results — your outcomes are a reflection of your daily habits" data-hi="आपके नतीजों की foundation — आपके outcomes आपकी daily habits का reflection हैं">The foundation of your results — your outcomes are a reflection of your daily habits</li>
+                <li class="lang-toggle-content" data-en="One small habit can cascade into massive results" data-hi="एक छोटी सी habit बड़े नतीजों में बदल सकती है">One small habit can cascade into massive results</li>
             </ul>
             <div class="notes-section">
-                <p class="text-sm lang-toggle-content" data-en="Your Notes: Habits are the invisible architecture of your life. Your morning routine, how you handle pressure, the way you interact with others - these are all habits. The beautiful thing about habits is they're not permanent. You can build new ones. Think about this: What habits do you think make someone excellent at their job? Probably consistency, attention to detail, reliability." data-hi="आपके Notes: Habits तो आपकी ज़िंदगी की छिपी हुई architecture हैं। आपकी morning routine, आप pressure को कैसे handle करते हो, दूसरों के साथ interaction - सब कुछ habits ही हैं। और अच्छी बात यह है कि habits permanent नहीं होती। आप नई habits बना सकते हो। सोचो: किन habits की वजह से कोई अपने काम में excellent होता है? शायद consistency, ध्यान से काम करना, और reliable होना।">Your Notes: Habits are the invisible architecture...</p>
+                <p class="text-sm lang-toggle-content" data-en="Your Notes: Habits are the invisible architecture of your life. Your morning routine, how you handle pressure, the way you interact with others — these are all habits. The beautiful thing about habits is they're not permanent. You can build new ones. Think about this: What habits do you think make someone excellent at their job? Probably consistency, attention to detail, reliability." data-hi="आपकी Notes: Habits आपकी ज़िंदगी की invisible architecture हैं। आपकी morning routine, pressure को कैसे handle करते हो, दूसरों से कैसे बात करते हो — सब कुछ habits हैं। Habits की अच्छी बात है कि ये permanent नहीं हैं। आप नई habits बना सकते हो। सोचो: किन habits से कोई अपने काम में शानदार बन जाता है? शायद consistency, ध्यान details पर, और reliability।">Your Notes: Habits are the invisible architecture of your life. Your morning routine, how you handle pressure, the way you interact with others — these are all habits. The beautiful thing about habits is they're not permanent. You can build new ones. Think about this: What habits do you think make someone excellent at their job? Probably consistency, attention to detail, reliability.</p>
             </div>
         </section>
 
         <!-- Slide 3 -->
         <section class="slide content-slide">
-            <h2 class="lang-toggle-content" data-en="Results Come From Habits, Not Goals" data-hi="Goals नहीं, Habits से Results आते हैं">Results Come From Habits, Not Goals</h2>
-            <p class="text-lg lang-toggle-content" style="margin-bottom: 1.5rem;" data-en="You want: success, growth, excellence. But real change comes from fixing habits, not chasing results." data-hi="You चाहते हो: success, growth, excellence। पर असली change तो habits को fix करने से आता है, results को chase करने से नहीं।">You want: success, growth, excellence. But real change comes from fixing habits, not chasing results.</p>
+            <h2 class="lang-toggle-content" data-en="Results Come From Habits, Not Goals" data-hi="Goals से नहीं, Habits से Results आते हैं">Results Come From Habits, Not Goals</h2>
+            <p class="text-lg lang-toggle-content" style="margin-bottom: 1.5rem;" data-en="You want success, growth, excellence. But real change comes from fixing habits, not chasing results." data-hi="आप सफलता, growth, excellence चाहते हो। पर असली change तब आता है जब आप habits को fix करो, results को chase करने की जगह।">You want success, growth, excellence. But real change comes from fixing habits, not chasing results.</p>
             <div class="row">
                 <div class="column">
                     <h4 class="lang-toggle-content" data-en="❌ Wrong Focus" data-hi="❌ गलत तरीका">❌ Wrong Focus</h4>
-                    <p class="lang-toggle-content" data-en="Chase targets without systems" data-hi="Targets को chase करो बिना systems के">Chase targets without systems</p>
+                    <p class="lang-toggle-content" data-en="Chase targets without systems" data-hi="Targets को chase करो systems के बिना">Chase targets without systems</p>
                 </div>
                 <div class="column">
-                    <h4 class="lang-toggle-content" data-en="✅ Right Focus" data-hi="✅ सही तरीका">✅ Right Focus</h4>
-                    <p class="lang-toggle-content" data-en="Build habits that naturally lead to those results" data-hi="Habits build करो जो naturally उन results तक ले जाएं">Build habits that naturally lead to those results</p>
+                    <h4 class="lang-toggle-content" data-en="✓ Right Focus" data-hi="✓ सही तरीका">✓ Right Focus</h4>
+                    <p class="lang-toggle-content" data-en="Build habits that naturally lead to those results" data-hi="Habits बनाओ जो naturally उन results तक पहुंचा दे">Build habits that naturally lead to those results</p>
                 </div>
             </div>
             <div class="notes-section">
-                <p class="text-sm lang-toggle-content" data-en="Your Notes: This is the key insight. Winners and losers in sports often have the same goals - to win. But winners have better systems and habits that get them there. Think about your own work - did your results increase because you chased them? Or because you built systems that made quality consistent, execution reliable, and performance effortless?" data-hi="आपके Notes: यही तो असली insight है! Sports में winners और losers दोनों का goal same होता है - win करना। पर winners के पास better systems और habits होती हैं। अपने काम के बारे में सोचो - क्या results बढ़े क्योंकि तुम उन्हें chase कर रहे थे? या क्योंकि तुमने systems बनाए जो quality को consistent रखते हैं, execution को reliable बनाते हैं, और performance को effortless बनाते हैं?">Your Notes: This is the key insight...</p>
-            </div>
-        </section>
-
-        <!-- Slide 4 -->
-        <section class="slide content-slide">
-            <h2 class="lang-toggle-content" data-en="The Starting Line Matters Most" data-hi="शुरुआत ही सब कुछ है">The Starting Line Matters Most</h2>
-            <ul class="text-lg">
-                <li class="lang-toggle-content" data-en="Getting started is harder than continuing" data-hi="Start करना आगे बढ़ने से कहीं ज़्यादा मुश्किल है">Getting started is harder than continuing</li>
-                <li class="lang-toggle-content" data-en="Master the first 5 minutes - everything flows after" data-hi="पहले 5 मिनट को जीत लो - बाकी सब अपने आप हो जाता है">Master the first 5 minutes - everything flows after</li>
-                <li class="lang-toggle-content" data-en="Challenges don't stop winners - it's about overcoming initial friction" data-hi="Winners को challenges नहीं रोक सकते - यह तो initial friction को overcome करने के बारे में है">Challenges don't stop winners - it's about overcoming initial friction</li>
-            </ul>
-            <div class="notes-section">
-                <p class="text-sm lang-toggle-content" data-en="Your Notes: Think about your own experience: On days when you don't feel like it, what stops you? The first 5 minutes. Once you've started, momentum takes over. The hardest part is beginning. On tough days, only the disciplined show up. Those who handle 5 minutes of initial resistance succeed. What's YOUR 5-minute battle? Is it starting work? Making the first decision? Once you overcome that, the rest flows. This pattern works everywhere - starting a new project, returning to a routine, learning something new. Master those first 5 minutes, and you win the day." data-hi="आपके Notes: अपने experience के बारे में सोचो: जिन दिनों तुम्हारा मन न हो, क्या तुम्हें रोकता है? पहले 5 मिनट। एक बार start कर दिया तो momentum अपना काम कर देता है। सबसे मुश्किल तो beginning है। Tough दिनों पर सिर्फ disciplined लोग ही show up करते हैं। वो जो 5 मिनट की initial resistance को handle कर लेते हैं, वो succeed कर जाते हैं। तुम्हारी 5-minute battle क्या है? काम start करना? पहला decision लेना? एक बार वो overcome हो गया तो बाकी सब flow करेगा। यह pattern everywhere काम करता है। उन पहले 5 मिनट को master करो, और तुम दिन को जीत लोगे।">Your Notes: Think about your own experience...</p>
-            </div>
-        </section>
-
-        <!-- Slide 5: Don't Delay 2-Minute Tasks -->
-        <section class="slide content-slide">
-            <h2 class="lang-toggle-content" data-en="Don't Delay 2-Minute Tasks" data-hi="2-Minute के काम delay न करो">Don't Delay 2-Minute Tasks</h2>
-            <ul class="text-lg">
-                <li class="lang-toggle-content" data-en="Small tasks compound into major problems if postponed" data-hi="छोटे काम postpone करने से बड़ी परेशानी बन जाती है">Small tasks compound into major problems if postponed</li>
-                <li class="lang-toggle-content" data-en="Wash hands immediately → prevents food safety issues" data-hi="हाथ तुरंत धो लो → food safety issues नहीं होंगे">Wash hands immediately → prevents food safety issues</li>
-                <li class="lang-toggle-content" data-en="Clean your station → prevents pest problems" data-hi="अपना station साफ रखो → pest problems नहीं होंगी">Clean your station → prevents pest problems</li>
-                <li class="lang-toggle-content" data-en="Count inventory → reveals shortages before next day" data-hi="Inventory count करो → अगले दिन से पहले shortages पता चल जाएंगी">Count inventory → reveals shortages before next day</li>
-            </ul>
-            <div class="notes-section">
-                <p class="text-sm lang-toggle-content" data-en="Your Notes: This isn't about perfection - it's about safety and results. A 2-minute task completed now saves you from bigger problems later. Small tasks compound into major issues if postponed. When you say 'I'll do it later,' that task becomes someone else's 30-minute problem tomorrow - or worse, a crisis you cause. Your discipline on small tasks determines whether you stay in control or get controlled by circumstances." data-hi="आपके Notes: यह perfection के बारे में नहीं है - यह safety और results के बारे में है। एक 2-minute task अभी complete कर दो तो आगे बड़ी परेशानी से बच जाओ। छोटे काम postpone करने से बड़े issue बन जाते हैं। जब तुम कहते हो 'मैं बाद में करूँगा,' तो वह task कल किसी और की 30-minute problem बन जाती है - या बदतर, तुम्हारे लिए crisis। छोटे कामों पर तुम्हारी discipline यह decide करती है कि तुम control में हो या circumstances तुम्हें control कर रही हैं।">Your Notes: This isn't about perfection...</p>
-            </div>
-        </section>
-
-        <!-- Slide 6: Prime Your Environment -->
-        <section class="slide content-slide">
-            <h2 class="lang-toggle-content" data-en="Prime Your Environment" data-hi="अपने आसपास का माहौल सही करो">Prime Your Environment</h2>
-            <p class="text-lg lang-toggle-content" style="margin-bottom: 1.5rem;" data-en="Your environment does half the work for you" data-hi="आपका environment आधा काम कर देता है">Your environment does half the work for you</p>
-            <div class="row">
-                <div class="column">
-                    <h4 class="lang-toggle-content" data-en="✓ Right Setup" data-hi="✓ सही Setup">✓ Right Setup</h4>
-                    <p class="lang-toggle-content" style="font-size: 0.9rem; line-height: 1.6;" data-en="Tools and supplies prepped&#10;Everything within reach&#10;Checklists visible&#10;Clear procedures posted" data-hi="Tools और supplies ready&#10;सब कुछ हाथ के पास&#10;Checklists visible&#10;Clear procedures लगे हुए">Tools and supplies prepped<br/>Everything within reach<br/>Checklists visible<br/>Clear procedures posted</p>
-                </div>
-                <div class="column">
-                    <h4 class="lang-toggle-content" data-en="❌ What Breaks It" data-hi="❌ क्या गड़बड़ाता है">❌ What Breaks It</h4>
-                    <p class="lang-toggle-content" style="font-size: 0.9rem; line-height: 1.6;" data-en="Searching for what you need&#10;Tools scattered everywhere&#10;No clear workflow&#10;Forgotten procedures" data-hi="चीज़ें ढूंढने में समय बर्बाद&#10;Tools यहाँ-वहाँ बिखरे हुए&#10;No clear workflow&#10;Procedures भूल जाना">Searching for what you need<br/>Tools scattered everywhere<br/>No clear workflow<br/>Forgotten procedures</p>
-                </div>
-            </div>
-            <div class="notes-section">
-                <p class="text-sm lang-toggle-content" data-en="Your Notes: This is about friction - the resistance between intention and action. If the tool you need is buried, you use a worse one. If your checklist is in a file somewhere, you skip it. Smart people design their environment. What would make your work 10% easier tomorrow? Small environment changes compound into huge efficiency gains." data-hi="आपके Notes: यह friction के बारे में है - intention और action के बीच का resistance। अगर जो tool चाहिए वह दब गया है तो तुम कोई दूसरा, बुरा option use करोगे। Smart लोग अपना environment design करते हैं। क्या करने से तुम्हारा काम कल 10% आसान हो सकता है? छोटे environment changes से बहुत बड़ा efficiency gain आते हैं।">Your Notes: This is about friction...</p>
-            </div>
-        </section>
-
-        <!-- Slide 7: Make It Fun -->
-        <section class="slide content-slide">
-            <h2 class="lang-toggle-content" data-en="Make It Fun - The Missing Ingredient" data-hi="Fun बनाओ - यही तो मिसिंग है!">Make It Fun - The Missing Ingredient</h2>
-            <ul class="text-lg">
-                <li class="lang-toggle-content" data-en="People stick with what feels good, not what feels like a hassle" data-hi="लोग उन कामों को करते रहते हैं जो अच्छा लगता है, न कि जो hassle लगता है">People stick with what feels good, not what feels like a hassle</li>
-                <li class="lang-toggle-content" data-en="Mastering your craft → genuine pride (not just salary)" data-hi="अपने craft को master करना → real pride (सिर्फ salary नहीं)">Mastering your craft → genuine pride (not just salary)</li>
-                <li class="lang-toggle-content" data-en="Customer praise heard directly → immediate reward" data-hi="Customer का सीधा praise → instant reward">Customer praise heard directly → immediate reward</li>
-                <li class="lang-toggle-content" data-en="Team wins → celebrate small victories together" data-hi="Team की जीत → साथ में छोटी-छोटी जीतें celebrate करो">Team wins → celebrate small victories together</li>
-            </ul>
-            <div class="notes-section">
-                <p class="text-sm lang-toggle-content" data-en="Your Notes: The biggest hurdle to lasting habits is engagement. Don't confuse 'fun' with 'easy' - work is work. But there's a difference between grinding and finding meaning. When you see yourself as someone who does quality work, you show up differently. Small shifts in how you frame your work make discipline feel like choice, not punishment." data-hi="आपके Notes: Lasting habits के लिए सबसे बड़ी रुकावट engagement है। 'Fun' को 'easy' के साथ confuse न करो - काम तो काम है। पर grinding और meaning find करने में फर्क है। जब तुम अपने आप को quality काम करने वाले की तरह देखो, तो अलग तरीके से show up करते हो। काम को frame करने का छोटा सा बदलाव discipline को punishment की जगह choice बना देता है।">Your Notes: The biggest hurdle...</p>
-            </div>
-        </section>
-
-        <!-- Slide 8: Systems Beat Goals -->
-        <section class="slide content-slide">
-            <h2 class="lang-toggle-content" data-en="Systems Beat Goals (Always)" data-hi="Systems हमेशा Goals को हराते हैं">Systems Beat Goals (Always)</h2>
-            <div class="row" style="margin-bottom: 1.5rem;">
-                <div class="column">
-                    <h4 class="lang-toggle-content" data-en="❌ Goal" data-hi="❌ Goal">❌ Goal</h4>
-                    <p class="lang-toggle-content" style="font-size: 0.9rem;" data-en="\"I want to be successful this year\"&#10;(Feels good, no plan)" data-hi="\"मैं इस साल successful होना चाहता हूँ\"&#10;(अच्छा लगता है, कोई plan नहीं)">\"I want to be successful this year\"<br/>(Feels good, no plan)</p>
-                </div>
-                <div class="column">
-                    <h4 class="lang-toggle-content" data-en="✓ System" data-hi="✓ System">✓ System</h4>
-                    <p class="lang-toggle-content" style="font-size: 0.9rem;" data-en="\"Execute daily: 2 hours deep work, one conversation, one learning\"&#10;(Actual daily process)" data-hi="\"हर दिन: 2 घंटे deep work, एक important conversation, एक learning\"&#10;(असली daily process)">\"Execute daily: 2 hours deep work, one conversation, one learning\"<br/>(Actual daily process)</p>
-                </div>
-            </div>
-            <div class="notes-section">
-                <p class="text-sm lang-toggle-content" data-en="Your Notes: Winners and losers often have the same goals. But winners have better systems. Goals are binary. Systems are ongoing. Here's the magic: if your daily system is solid, your goals become inevitable. Focus on systems, not goals." data-hi="आपके Notes: Winners और losers का goal अक्सर same होता है। पर winners के पास better systems होती हैं। Goals तो binary होते हैं। Systems continuous होते हैं। यही magic है: अगर तुम्हारी daily system solid है तो goals inevitable हो जाते हैं। Goals नहीं, systems पर focus करो।">Your Notes: Winners and losers...</p>
-            </div>
-        </section>
-
-        <!-- Slide 9: Never Throw Up A Zero -->
-        <section class="slide content-slide">
-            <h2 class="lang-toggle-content" data-en="Never Throw Up A Zero" data-hi="कभी Zero न बनाओ">Never Throw Up A Zero</h2>
-            <ul class="text-lg">
-                <li class="lang-toggle-content" data-en="Even a bad day is better than no day" data-hi="बुरा दिन भी better है no दिन से">Even a bad day is better than no day</li>
-                <li class="lang-toggle-content" data-en="Half effort > zero effort because \"today was hard\"" data-hi="आधा effort > zero effort क्योंकि 'आज मुश्किल था'">Half effort > zero effort because \"today was hard\"</li>
-                <li class="lang-toggle-content" data-en="Missed your window? Still show up." data-hi="समय निकल गया? तब भी show up करो।">Missed your window? Still show up.</li>
-                <li class="lang-toggle-content" data-en="Made a mistake? Still execute, learn from it." data-hi="गलती हुई? तब भी execute करो, सीखो।">Made a mistake? Still execute, learn from it.</li>
-                <li class="lang-toggle-content" data-en="Momentum builds from consistency, not perfection" data-hi="Momentum consistency से आता है, perfection से नहीं">Momentum builds from consistency, not perfection</li>
-            </ul>
-            <div class="notes-section">
-                <p class="text-sm lang-toggle-content" data-en="Your Notes: This is consistency beats perfection. Breaking the chain breaks your identity. You show up on bad days. Your competition skips. That's the difference - not talent, but showing up when it's hard." data-hi="आपके Notes: यह consistency beats perfection है। Chain break करना identity को break कर देता है। तुम bad दिनों पर show up करते हो। तुम्हारे competitors skip करते हैं। यही difference है - talent नहीं, बस show up करना जब मुश्किल हो।">Your Notes: This is consistency...</p>
-            </div>
-        </section>
-
-        <!-- Slide 10: Identity Becomes The Habit -->
-        <section class="slide content-slide">
-            <h2 class="lang-toggle-content" data-en="You Don't \"Do\" Habits - You Become Them" data-hi="Habits 'करते' नहीं, 'बन' जाते हो">You Don't \"Do\" Habits - You Become Them</h2>
-            <ul class="text-lg">
-                <li class="lang-toggle-content" data-en="Not: \"I need to do quality work\" But: \"I am someone who does quality work\" (it's automatic)" data-hi="नहीं: \"मुझे quality काम करना चाहिए\" | बल्कि: \"मैं उस तरह का आदमी हूँ जो quality काम करता है\" (automatic है)">Not: \"I need to do quality work\" | But: \"I am someone who does quality work\"</li>
-                <li class="lang-toggle-content" data-en="Not: \"I should be on time\" But: \"I am reliable\" (punctuality follows naturally)" data-hi="नहीं: \"मुझे on time होना चाहिए\" | बल्कि: \"मैं reliable हूँ\" (punctuality naturally follow करती है)">Not: \"I should be on time\" | But: \"I am reliable\"</li>
-                <li class="lang-toggle-content" data-en="Every action is a vote for the person you're becoming" data-hi="हर action तुम्हारे बनने वाले person के लिए एक vote है">Every action is a vote for the person you're becoming</li>
-            </ul>
-            <div class="notes-section">
-                <p class="text-sm lang-toggle-content" data-en="Your Notes: Identity-based habits are powerful. When you see yourself as 'honest,' you're more likely to be honest. The question is: Who do you need to become? Not 'What do I need to do?' but 'Who do I need to be?' Then every action becomes a vote for that identity. Build the right identity, and habits build themselves." data-hi="आपके Notes: Identity-based habits बहुत powerful होती हैं। जब तुम अपने आप को 'honest' की तरह देखते हो, तो honest होने की chance बढ़ जाती है। सवाल यह है: तुम्हें कौन बनना है? 'मुझे क्या करना चाहिए?' नहीं, बल्कि 'मुझे कौन बनना चाहिए?' फिर हर action एक vote बन जाता है। सही identity build करो, और habits अपने आप बन जाती हैं।">Your Notes: Identity-based habits...</p>
-            </div>
-        </section>
-
-        <!-- Slide 11: Habit Stacking -->
-        <section class="slide content-slide">
-            <h2 class="lang-toggle-content" data-en="Stack New Habits on Old Ones" data-hi="नई Habits को पुरानी के साथ जोड़ो">Stack New Habits on Old Ones</h2>
-            <p class="text-lg lang-toggle-content" style="margin-bottom: 1.5rem;" data-en="After [existing habit] I will [new habit]" data-hi="[Existing काम] के बाद मैं [नया काम] करूँगा">After [existing habit] I will [new habit]</p>
-            <ul class="text-lg">
-                <li class="lang-toggle-content" data-en="After I start my day, I review my priorities" data-hi="जब मैं अपने दिन की शुरुआत करता हूँ, तो अपनी priorities review करता हूँ">After I start my day, I review my priorities</li>
-                <li class="lang-toggle-content" data-en="After I finish a major task, I take 5 minutes to update my progress" data-hi="जब मैं बड़ा task complete करता हूँ, तो 5 मिनट में अपनी progress update करता हूँ">After I finish a major task, I take 5 minutes to update my progress</li>
-                <li class="lang-toggle-content" data-en="After lunch, I do a quick learning activity" data-hi="Lunch के बाद, मैं एक learning activity करता हूँ">After lunch, I do a quick learning activity</li>
-                <li class="lang-toggle-content" data-en="After my work ends, I plan tomorrow's three key actions" data-hi="अपने काम के अंत में, मैं कल के तीन key actions plan करता हूँ">After my work ends, I plan tomorrow's three key actions</li>
-            </ul>
-            <div class="notes-section">
-                <p class="text-sm lang-toggle-content" data-en="Your Notes: New habits stick when anchored to existing ones. Your brain already has the existing habit wired. Layer new habits on top - requires almost no willpower. This is about making new habits impossible to forget by attaching them to anchor points that already happen daily." data-hi="आपके Notes: नई habits तब stick करती हैं जब वो existing habits से anchor हों। दिमाग़ में पहले से ही existing habit wired है। नई habit को top पर layer करो - almost कोई willpower नहीं चाहिए। नई habits को impossible बना देता है भूलने के लिए क्योंकि वो anchor points से जुड़ी होती हैं जो daily happen करते हैं।">Your Notes: New habits stick...</p>
-            </div>
-        </section>
-
-        <!-- Slide 12: Reduce Scope, Stick to Schedule -->
-        <section class="slide content-slide">
-            <h2 class="lang-toggle-content" data-en="Reduce Scope, Stick to Schedule" data-hi="Scope कम करो, Schedule पर रहो">Reduce Scope, Stick to Schedule</h2>
-            <p class="text-lg lang-toggle-content" style="margin-bottom: 1.5rem;" data-en="What to do when time is short or you're overwhelmed:" data-hi="जब समय कम हो या तुम overwhelmed हो:">What to do when time is short or you're overwhelmed:</p>
-            <div class="row">
-                <div class="column">
-                    <h4 class="lang-toggle-content" data-en="❌ Wrong" data-hi="❌ गलत तरीका">❌ Wrong</h4>
-                    <p class="lang-toggle-content" style="font-size: 0.9rem;" data-en="\"I planned to do X, but I'm behind. Forget it, I'll skip today.\"&#10;(You threw up a zero)" data-hi="\"मैंने X करना plan किया था, पर पीछे हूँ। भूल जाओ, आज skip कर दूँगा।\"&#10;(Zero बना दिया)">\"I planned to do X, but I'm behind. Forget it, I'll skip today.\"<br/>(You threw up a zero)</p>
-                </div>
-                <div class="column">
-                    <h4 class="lang-toggle-content" data-en="✓ Right" data-hi="✓ सही तरीका">✓ Right</h4>
-                    <p class="lang-toggle-content" style="font-size: 0.9rem;" data-en="\"I'll do half of X today, but I'll do it on schedule.\"&#10;(You maintained the habit)" data-hi="\"आज X का आधा करूँगा, पर schedule पर।\"&#10;(Habit maintain रहेगी)">\"I'll do half of X today, but I'll do it on schedule.\"<br/>(You maintained the habit)</p>
-                </div>
-            </div>
-            <div class="notes-section">
-                <p class="text-sm lang-toggle-content" data-en="Your Notes: Bad days are MORE important than good days - they test real commitment. Do you skip completely or show up with half the output on schedule? The second option builds reputation. Scale down if needed, but keep the commitment. That's resilient character." data-hi="आपके Notes: Bad दिन अच्छे दिनों से ज़्यादा important हैं - वो real commitment को test करते हैं। क्या तुम completely skip करते हो या आधे output के साथ schedule पर show up करते हो? दूसरा option reputation build करता है। Scope कम करो अगर ज़रूरत हो, पर commitment रखो। यही resilient character है।">Your Notes: Bad days are MORE important...</p>
-            </div>
-        </section>
-
-        <!-- Slide 13: Track Your Wins -->
-        <section class="slide content-slide">
-            <h2 class="lang-toggle-content" data-en="Track Your Wins Visibly" data-hi="अपनी Wins को Visible रखो">Track Your Wins Visibly</h2>
-            <ul class="text-lg">
-                <li class="lang-toggle-content" data-en="Humans are wired to see progress - make it visible" data-hi="हमारा दिमाग़ progress देखना चाहता है - visible करो">Humans are wired to see progress - make it visible</li>
-                <li class="lang-toggle-content" data-en="7 consecutive days completed = small celebration" data-hi="7 दिन लगातार = छोटी celebration">7 consecutive days completed = small celebration</li>
-                <li class="lang-toggle-content" data-en="30 days of consistency = public recognition" data-hi="30 दिन consistency = public recognition">30 days of consistency = public recognition</li>
-                <li class="lang-toggle-content" data-en="Visual tracking (checklist, counter, app) keeps habits alive" data-hi="Visual tracking (checklist, counter, app) = habits alive रहती हैं">Visual tracking (checklist, counter, app) keeps habits alive</li>
-                <li class="lang-toggle-content" data-en="Watching the chain grow is its own reward" data-hi="Chain को बढ़ते देखना ही reward है">Watching the chain grow is its own reward</li>
-            </ul>
-            <div class="notes-section">
-                <p class="text-sm lang-toggle-content" data-en="Your Notes: Use the paper clip strategy - visual evidence of progress. Your brain craves evidence. When you see '27 consecutive days,' it becomes pride. You don't want to break the chain. Use that psychology - track visibly. Seeing the number grow makes you want to keep growing." data-hi="आपके Notes: Paper clip strategy use करो - visual evidence of progress। दिमाग़ progress का evidence चाहता है। जब तुम '27 consecutive days' देखते हो, तो गर्व होता है। Chain break नहीं करना होता। उसी psychology को use करो - visibly track करो। Number को grow होते देखना motivate करता है।">Your Notes: Use the paper clip strategy...</p>
-            </div>
-        </section>
-
-        <!-- Slide 14: The 1% Rule -->
-        <section class="slide content-slide">
-            <h2 class="lang-toggle-content" data-en="1% Better Every Day = 37x Better In a Year" data-hi="हर दिन 1% बेहतर = एक साल में 37x बेहतर">1% Better Every Day = 37x Better In a Year</h2>
-            <p class="text-lg lang-toggle-content" style="margin-bottom: 1.5rem;" data-en="1.01^365 = 37.78 | But also: 0.99^365 = 0.03 (37x worse)" data-hi="1.01^365 = 37.78 | पर: 0.99^365 = 0.03 (37x बदतर)">1.01^365 = 37.78 | But also: 0.99^365 = 0.03 (37x worse)</p>
-            <ul class="text-lg">
-                <li class="lang-toggle-content" data-en="You're either improving or declining - stagnation isn't real" data-hi="तुम या improve कर रहे हो या decline - stagnation असली नहीं है">You're either improving or declining - stagnation isn't real</li>
-                <li class="lang-toggle-content" data-en="Small daily improvements compound invisibly... then explosively" data-hi="छोटे daily improvements invisibly compound होते हैं... फिर explosively">Small daily improvements compound invisibly... then explosively</li>
-                <li class="lang-toggle-content" data-en="Month 1: invisible progress. Month 6: noticeable. Year 1: life-changing" data-hi="महीना 1: invisible। महीना 6: noticeable। साल 1: life-changing">Month 1: invisible progress. Month 6: noticeable. Year 1: life-changing</li>
-                <li class="lang-toggle-content" data-en="The hardest part is staying with it during months 1-3" data-hi="सबसे मुश्किल महीने 1-3 के दौरान stay करना है">The hardest part is staying with it during months 1-3</li>
-            </ul>
-            <div class="notes-section">
-                <p class="text-sm lang-toggle-content" data-en="Your Notes: This is long-game perspective. 1% daily improvement = unrecognizable after a year. But flip side: 1% daily decline = catastrophic. You compete against everyone. Direction matters more than speed. Compound interest works FOR you or AGAINST you. Compound interest is ruthless - it works both ways." data-hi="आपके Notes: यह long-game perspective है। हर दिन 1% better = एक साल बाद unrecognizable। पर flip side: हर दिन 1% worse = catastrophic। तुम सब से compete करते हो। Direction ज़्यादा important है speed से। Compound interest तुम्हारे लिए या तुम्हारे ख़िलाफ़ काम करती है। Compound interest ruthless है - दोनों तरीकों से काम करती है।">Your Notes: This is long-game perspective...</p>
-            </div>
-        </section>
-
-        <!-- Slide 15: Action Plan -->
-        <section class="slide content-slide">
-            <h2 class="lang-toggle-content" data-en="Action: Pick One Habit This Week" data-hi="Action: इस हफ़्ते एक Habit चुनो">Action: Pick One Habit This Week</h2>
-            <ul class="text-lg">
-                <li class="lang-toggle-content" data-en="START small - win the first 5 minutes" data-hi="START छोटा - पहले 5 मिनट जीत लो">START small - win the first 5 minutes</li>
-                <li class="lang-toggle-content" data-en="PRIME your environment - make it obvious" data-hi="PRIME अपना environment - obvious बना दो">PRIME your environment - make it obvious</li>
-                <li class="lang-toggle-content" data-en="STACK it on an existing habit" data-hi="STACK करो existing habit के साथ">STACK it on an existing habit</li>
-                <li class="lang-toggle-content" data-en="TRACK it visibly (checkbox, app, checklist)" data-hi="TRACK करो visibly (checkbox, app, checklist)">TRACK it visibly (checkbox, app, checklist)</li>
-                <li class="lang-toggle-content" data-en="NEVER throw up a zero - do something on bad days" data-hi="NEVER zero बनाओ - bad दिनों पर भी कुछ करो">NEVER throw up a zero - do something on bad days</li>
-            </ul>
-            <div class="notes-section">
-                <p class="text-sm lang-toggle-content" data-en="Your Notes: Pick ONE habit. Make it small, specific, tied to something you already do. By next week, visible evidence. Tracked checklist. Completed action. This builds momentum. The magic is seeing progress - creates confidence, creates success. Perform better when you see you're winning. Give yourself that evidence. One habit, tracked visibly, compounded daily = foundation for everything." data-hi="आपके Notes: एक ही habit चुनो। छोटा रखो, specific हो, something के साथ जुड़ा हो जो तुम पहले से करते हो। अगले हफ़्ते तक visible evidence। Tracked checklist। Completed action। यह momentum build करता है। Magic है progress देखना - confidence create करता है, success create करता है। Better perform करते हो जब देखते हो winning हो रहे हो। अपने आप को evidence दो। एक habit, visibly tracked, daily compounded = सब कुछ का foundation।">Your Notes: Pick ONE habit...</p>
-            </div>
-        </section>
-
-        <!-- Slide 16 - Final Slide -->
-        <section class="slide center-slide">
-            <h2 class="lang-toggle-content" style="font-size: 3rem; margin-bottom: 2rem;" data-en="Small Habits. Big Results." data-hi="छोटी Habits। बड़े Results।">Small Habits. Big Results.</h2>
-            <p class="text-lg lang-toggle-content" style="margin-bottom: 2rem;" data-en="You're not competing against others." data-hi="तुम दूसरों के साथ compete नहीं कर रहे।">You're not competing against others.</p>
-            <p class="text-lg lang-toggle-content" style="margin-bottom: 2rem;" data-en="You're competing against yesterday's version of yourself." data-hi="तुम अपने कल के version के साथ compete कर रहे हो।">You're competing against yesterday's version of yourself.</p>
-            <p class="tagline lang-toggle-content" data-en="Be 1% better today. Stack it. Repeat." data-hi="आज 1% बेहतर बनो। Stack करो। Repeat करो।">Be 1% better today. Stack it. Repeat.</p>
-        </section>
-    </div>
-
-    <script>
-        function setLanguage(lang) {
-            // Update button states
-            document.querySelectorAll('.lang-btn').forEach(btn => {
-                btn.classList.remove('active');
-            });
-            event.target.classList.add('active');
-
-            // Update content
-            document.querySelectorAll('[data-en][data-hi]').forEach(element => {
-                if (lang === 'en') {
-                    element.textContent = element.getAttribute('data-en');
-                } else if (lang === 'hi') {
-                    element.textContent = element.getAttribute('data-hi');
-                }
-            });
-
-            // Store preference
-            localStorage.setItem('preferredLanguage', lang);
-        }
-
-        // Load saved language preference on page load
-        window.addEventListener('load', function() {
-            const savedLang = localStorage.getItem('preferredLanguage') || 'en';
-            if (savedLang === 'hi') {
-                document.querySelectorAll('.lang-btn')[1].click();
-            }
-        });
-    </script>
-</body>
-</html>
+                <p class="text-sm lang-toggle-content" data-en="Your Notes: This is the key insight. Winners and losers in sports often have the same goals — to win. But winners have better systems and habits that get them there. Think about your own work — did your results increase because you chased them? Or because you built systems that made quality consistent, execution reliable, and performance effortless?" data-hi="आपकी Notes: यह key insight है। Sports में winners और losers का goal एक ही होता है — जीतना। पर winners के पास better systems और habits होती हैं। अपने काम के बार
